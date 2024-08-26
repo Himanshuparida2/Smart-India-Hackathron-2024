@@ -32,6 +32,9 @@
     &:hover{
         width: 4cm;
     }
+    &:hover li{
+        border-radius: 15px;
+    }
     &:hover #hamburger{
         transition: transform 0.3s ease;
         transform: rotate(90deg);
@@ -187,8 +190,9 @@ svg{
 }
 .sidebar-list li{
     display: grid;
+    border-radius: 15px;
     &:hover{
-        background-color: rgb(126, 118, 118);
+        background-color: rgb(5, 115, 179);
         opacity: 0.8;
     }
 }
@@ -207,7 +211,7 @@ svg{
     transform: rotate(90deg);
 }
 .active{
-    background-color: gray;
+    background-color: rgb(0, 124, 196);
     color: white;
 }
 #chatbot{
