@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.contain{
+    width: 100vi;
+    height: 100vh;
+}
+.sidebar #logo{
+    position: absolute;
+    width: 1cm;
+    height: 1cm;
+    top: 0.7cm;
+    left: 2.4cm;
+    z-index: 1;
+    transition: left 0.3s ease;
+}
+.sidebar{
+    position: absolute;
+    height: 18cm;
+    width: 2cm;
+    border-radius: 20px;
+    background-color: rgb(0, 166, 255);
+    margin-left: -15px;
+    margin-top: -16px;
+    opacity: 0.7;
+    z-index: 1;
+    border: 1px solid black;
+    font-family: sans-serif;
+    transition: width 0.3s ease;
+    &:hover{
+        width: 4cm;
+    }
+    &:hover #hamburger{
+        transition: transform 0.3s ease;
+        transform: rotate(90deg);
+    }
+    &:hover #home{
+        top: 3.4cm;
+    }
+    &:hover #help{
+        top: 5.7cm;
+    }
+    &:hover #about{
+        top: 7.9cm;
+    }
+    &:hover #customer{
+        top: 9.95cm;
+    }
+    &:hover h5{
+        font-size: 14px;
+        margin-top: 0.4cm;
+    }
+    &:hover #logo{
+        left: 4.5cm;
+    }
+}
+.booking-time{
+    width: 5cm;
+    height: 1.5cm;
+    background-color: rgb(0, 166, 255);
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    left: 10%;
+    display: grid;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    opacity: 0.7;
+    border: 2px solid rgb(63, 63, 247);
+}
+.booking-time p{
+    margin-left: 5px;
+    width: 3.5cm;
+}
+#booking-btn{
+    position: absolute;
+    top: 9.2cm;
+    left: 10%;
+    height: 1cm;
+    width: 3.65cm;
+    border-radius: 50px;
+    border: 2px solid rgb(63, 63, 247);
+    background-color: rgb(0, 166, 255);
+    opacity: 0.7;
+}
+#booking-btn p{
+    margin-left: -0.55cm;
+    cursor: pointer;
+    color: white;
+}
+.background-img{
+    position: absolute;
+    margin-top: 0%;
+    width: 100%;
+    height: 70%;
+    animation: change 10s infinite ease;
+    background-size:100%;
+}
+@keyframes change{
+    0%{
+        background-image: url(image1.jpg);
+        object-fit: cover;
+    }
+    25%{
+        background-image: url(image2.jpg);
+    }
+    50%{
+        background-image: url(image3.jpg);
+    }
+    75%{
+        background-image: url(image4.jpg);
+    }
+    100%{
+        background-image: url(image1.jpg);
+    }
+}
+.box1,.box2,.box3{
+    width: 9.5cm;
+    height: 5cm;
+    background-color: rgb(0, 166, 255);
+    z-index: 1;
+    display: grid;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 10px;
+    justify-content: center;
+    line-height: 50px;
+    top: 13cm;
+    border: 2px solid rgb(63, 63, 247);
+    color: whitesmoke;
+    font-weight: 550;
+    font-family: sans-serif;
+    text-shadow: 
+                0.5px 0.5px 0px rgb(56, 56, 56),
+                -0.5px 0.5px 0px rgb(56, 56, 56), 
+                0.5px -0.5px 0px rgb(56, 56, 56), 
+                -0.5px -0.5px 0px rgb(56, 56, 56);
+}
+.box1{
+    left: 5cm;
+}
+.box2{
+    left: 15.5cm;
+}
+.box3{
+    left: 26cm
+}
+.sidebar-list{
+    margin-left: 0.3cm;
+    line-height: 1.8cm;
+    margin-top: 2.5cm;
+    list-style-type: none;
+    font-size: 15px;
+    cursor: pointer;
+    display: grid;
+}
+#home{
+    position: absolute;
+    z-index: 1;
+    height: 0.65cm;
+    left: 31px;
+    top: 3cm;
+    transition: top 0.3s ease;
+}
+svg{
+    position: absolute;
+}
+#help{
+    left: 31px;
+    top: 5.2cm;
+    transition: top 0.3s ease;
+}
+#about{
+    height: 0.55cm;
+    left: 31px;
+    top: 7.55cm;
+    transition: top 0.3s ease;
+}
+#customer{
+    height: 0.75cm;
+    left: -20px;
+    top: 9.7cm;
+    transition: top 0.3s ease;
+}
+.sidebar-list li{
+    display: grid;
+    &:hover{
+        background-color: rgb(126, 118, 118);
+        opacity: 0.8;
+    }
+}
+.sidebar-list li h5{
+    justify-self: center;
+    margin-top: 0.5cm;
+}
+#hamburger{
+    height: 0.5cm;
+    left: 0.35cm;
+    top: 1cm;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#hamburger:hover{
+    transform: rotate(90deg);
+}
+.active{
+    background-color: gray;
+    color: white;
+}
+#chatbot{
+    position: absolute;
+    height: 1.7cm;
+    top: 92%;
+    right: 2%;
+    cursor: pointer;
+    transition: height,top 0.3s ease;
+    z-index: 1;
+    &:hover{
+        height: 1.8cm;
+        top: 91.5%;
+    }
+}
+.chatbot-text{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    transition: opacity,top 0.3s ease;
+}
+.navbar{
+    width: 9cm;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    z-index: 1;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    margin-left: 0.9cm;
+    cursor: pointer;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-weight: 550;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 
+                0.5px 0.5px 0px rgb(56, 56, 56),
+                -0.5px 0.5px 0px rgb(56, 56, 56), 
+                0.5px -0.5px 0px rgb(56, 56, 56), 
+                -0.5px -0.5px 0px rgb(56, 56, 56);
+    &:hover{
+        color: gray;
+    }
+}
+.navbar img{
+    height: 1cm;
+    position: absolute;
+    right: 5%;
+    top: -65%;
+    cursor: pointer;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
