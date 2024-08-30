@@ -1,0 +1,806 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+Link{
+  width: 3.7cm;
+}
+.contain{
+  width: 100vi;
+  height: 100vh;
+}
+.sidebar #logo{
+  position: absolute;
+  width: 1cm;
+  height: 1cm;
+  top: 0.7cm;
+  left: 2.4cm;
+  z-index: 1;
+  transition: left 0.3s ease;
+}
+.sidebar{
+  position: absolute;
+  height: 18cm;
+  width: 2cm;
+  border-radius: 20px;
+  background-color: rgb(0, 166, 255);
+  margin-left: -15px;
+  margin-top: -16px;
+  opacity: 0.7;
+  z-index: 2;
+  border: 1px solid black;
+  font-family: sans-serif;
+  transition: width 0.3s ease;
+  &:hover{
+      width: 4cm;
+  }
+  &:hover li{
+      border-radius: 15px;
+  }
+  &:hover #hamburger{
+      transition: transform 0.3s ease;
+      transform: rotate(90deg);
+  }
+  &:hover #home{
+      top: 4.15cm;
+  }
+  &:hover #help{
+      top: 6.35cm;
+  }
+  &:hover #about{
+      top: 8.6cm;
+  }
+  &:hover #customer{
+      top: 10.65cm;
+  }
+  &:hover .sidebar-title{
+      font-size: 14px;
+      margin-top: 0.4cm;
+      margin-left: 0.5cm;
+  }
+  &:hover #logo{
+      left: 4.5cm;
+  }
+}
+.booking-time{
+  width: 5cm;
+  height: 1.5cm;
+  background-color: rgb(0, 166, 255);
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  left: 10%;
+  display: grid;
+  color: white;
+  align-items: center;
+  border-radius: 5px;
+  opacity: 0.7;
+  border: 2px solid rgb(63, 63, 247);
+}
+.booking-time p{
+  margin-left: 5px;
+  width: 3.5cm;
+}
+#booking-btn{
+  position: absolute;
+  top: 9.2cm;
+  left: 10%;
+  height: 1cm;
+  width: 3.65cm;
+  border-radius: 50px;
+  border: 2px solid rgb(63, 63, 247);
+  background-color: rgb(0, 166, 255);
+  opacity: 0.7;
+}
+#booking-btn p{
+  margin-left: -0.55cm;
+  cursor: pointer;
+  color: white;
+}
+.background-img{
+  position: absolute;
+  margin-top: 0%;
+  width: 100%;
+  height: 70%;
+  animation: change 10s infinite ease;
+  background-size:100%;
+}
+@keyframes change{
+  0%{
+      background-image: url(./images/image1.jpg);
+      object-fit: cover;
+  }
+  25%{
+      background-image: url(./images/image2.jpg);
+  }
+  50%{
+      background-image: url(./images/image3.jpg);
+  }
+  75%{
+      background-image: url(./images/image4.jpg);
+  }
+  100%{
+      background-image: url(./images/image1.jpg);
+  }
+}
+.box1,.box2,.box3{
+  width: 9.5cm;
+  height: 5cm;
+  background-color: rgb(0, 166, 255);
+  z-index: 1;
+  display: grid;
+  opacity: 0.5;
+  position: absolute;
+  border-radius: 10px;
+  justify-content: center;
+  line-height: 50px;
+  top: 13cm;
+  border: 2px solid rgb(63, 63, 247);
+  color: whitesmoke;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-shadow: 
+              0.5px 0.5px 0px rgb(56, 56, 56),
+              -0.5px 0.5px 0px rgb(56, 56, 56), 
+              0.5px -0.5px 0px rgb(56, 56, 56), 
+              -0.5px -0.5px 0px rgb(56, 56, 56);
+}
+.box1{
+  left: 5cm;
+}
+.box2{
+  left: 15.5cm;
+}
+.box3{
+  left: 26cm
+}
+.sidebar-list{
+  margin-left: 0.3cm;
+  line-height: 1.8cm;
+  margin-top: 3.2cm;
+  list-style-type: none;
+  text-decoration-line: none;
+  font-size: 15px;
+  cursor: pointer;
+  display: grid;
+}
+#home{
+  position: absolute;
+  z-index: 1;
+  height: 0.65cm;
+  left: 31px;
+  top: 3.65cm;
+  transition: top 0.3s ease;
+}
+svg{
+  position: absolute;
+}
+#help{
+  left: 31px;
+  top: 5.7cm;
+  transition: top 0.3s ease;
+}
+#about{
+  height: 0.55cm;
+  left: 31px;
+  top: 8cm;
+  transition: top 0.3s ease;
+}
+#customer{
+  height: 0.75cm;
+  left: -20px;
+  top: 10.1cm;
+  transition: top 0.3s ease;
+}
+.sidebar-list li{
+  display: grid;
+  border-radius: 15px;
+  justify-items: center;
+  &:hover{
+      background-color: rgb(5, 115, 179);
+      opacity: 0.8;
+  }
+}
+.sidebar-list li .sidebar-title{
+  margin-top: 0.45cm;
+  text-decoration: none;
+  font-weight: 550;
+  color: black;
+}
+.sidebar-list .contact-title{
+  height: 2cm;
+  z-index: 1;
+}
+#hamburger{
+  height: 0.5cm;
+  left: 0.35cm;
+  top: 1cm;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#hamburger:hover{
+  transform: rotate(90deg);
+}
+.active{
+  background-color: rgb(0, 124, 196);
+}
+#chatbot{
+  position: absolute;
+  height: 1.7cm;
+  top: 92%;
+  right: 2%;
+  cursor: pointer;
+  transition: height,top 0.3s ease;
+  z-index: 2;
+  &:hover{
+      height: 1.8cm;
+      top: 91.5%;
+  }
+}
+.chatbot-text{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 15%;
+  transition: opacity,top 0.3s ease;
+}
+.navbar{
+  width: 9cm;
+  position: absolute;
+  right: 2%;
+  top: 3%;
+  z-index: 2;
+}
+.navbar ul{
+  display: flex;
+  list-style: none;
+}
+.navbar ul li{
+  margin-left: 0.9cm;
+  cursor: pointer;
+}
+.navbar ul li a{
+  text-decoration: none;
+  font-weight: 550;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 
+              0.5px 0.5px 0px rgb(56, 56, 56),
+              -0.5px 0.5px 0px rgb(56, 56, 56), 
+              0.5px -0.5px 0px rgb(56, 56, 56), 
+              -0.5px -0.5px 0px rgb(56, 56, 56);
+  &:hover{
+      color: gray;
+  }
+}
+.navbar img{
+  height: 1cm;
+  position: absolute;
+  right: 5%;
+  top: -65%;
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
+.contain-help,.contain-contact{
+  width: 33.5cm;
+  height: 11.5cm;
+  background-color: rgb(12, 129, 197);
+  position: absolute;
+  opacity: 0.7;
+  border: 2px solid rgb(45, 45, 235);
+  top: 40%;
+  left: 3cm;
+  border-radius: 20px;
+}
+#doctor-image{
+  height: 9cm;
+  width: 6.5cm;
+  position: absolute;
+  right: 8%;
+  top: 10%;
+  opacity: 1;
+  border-radius: 15px;
+  z-index: 1;
+}
+#help-title,#contact-title{
+  position: absolute;
+  left: 10%;
+  color: rgb(12, 129, 197);
+  top: 28%;
+  font-weight: 600;
+  z-index: 1;
+  font-size: 2cm;
+  text-shadow: 
+              0.5px 0.5px 0px rgb(56, 56, 56),
+              -0.5px 0.5px 0px rgb(56, 56, 56), 
+              0.5px -0.5px 0px rgb(56, 56, 56), 
+              -0.5px -0.5px 0px rgb(56, 56, 56);
+}
+#help-content{
+  top: 47%;
+  left: 10%;
+  position: absolute;
+  color: white;
+  width: 24cm;
+  height: 8.5cm;
+  font-weight: 550;
+}
+#help-booking-btn,#about-booking-btn{
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  width: 6cm;
+  height: 0.8cm;
+  border-radius: 15px;
+  color: black;
+  background-color: rgb(12, 129, 197);
+  opacity: 0.88;
+  text-align: start;
+  cursor: pointer;
+  border: 2px solid rgb(45, 45, 235);
+}
+#help-booking-btn p,#about-booking-btn p{
+  margin-left: 15px;
+}
+.contain-about{
+  width: 33.5cm;
+  height: 10cm;
+  background-color: rgb(12, 129, 197);
+  position: absolute;
+  opacity: 0.7;
+  border: 2px solid rgb(45, 45, 235);
+  top: 40%;
+  left: 3cm;
+  border-radius: 20px;
+}
+.about-inner-content{
+  position: absolute;
+  width: 20cm;
+  height: 7cm;
+  background-color: rgb(4, 96, 166);
+  top: 50%;
+  left: 10%;
+  border-radius: 15px;
+  border: 2px solid rgb(45, 45, 235);
+}
+#about-us-img{
+  height: 8cm;
+  width: 8.8cm;
+  position: absolute;
+  object-fit: fill;
+  right: 9%;
+  bottom: 16%;
+  border-radius: 15px;
+}
+#what-we-do,#our-mission,#our-goal{
+  top: 52%;
+  left: 11%;
+  position: absolute;
+  color: white;
+  width: 24cm;
+  height: 8.5cm;
+  font-weight: 550;
+}
+.about-btns{
+  width: 10cm;
+  left: 8%;
+  top: 43%;
+  position: absolute;
+}
+.about-btns button{
+  margin-left: 0.5cm;
+  height: 0.8cm;
+  width: 2.8cm;
+  border-radius: 5px;
+  font-weight: 550;
+  background-color: rgb(26, 135, 219);
+  border: 3px solid rgb(18, 86, 181);
+  cursor: pointer;
+}
+.hide{
+  opacity: 0;
+}
+.show{
+  opacity: 1;
+}
+.contact-content{
+  width: 33.5cm;
+  height: 11.5cm; 
+  position: absolute;
+  top: 40%;
+  left: 3cm;
+}
+.contact-content h1{
+  margin-left: 0.8cm;
+  margin-top: 0.4cm;
+  color: black;
+  text-shadow: 
+              0.5px 0.5px 0px rgb(56, 56, 56),
+              -0.5px 0.5px 0px rgb(56, 56, 56), 
+              0.5px -0.5px 0px rgb(56, 56, 56), 
+              -0.5px -0.5px 0px rgb(56, 56, 56);
+}
+#contact-info{
+  margin-left: 0.8cm;
+  margin-top: 0.4cm;
+}
+#contact-para-1{
+  left: 4%;
+  width: 8cm;
+}
+#contact-para-2{
+  left: 30%;
+}
+#contact-para-3{
+  left: 50%;
+}
+#contact-para-4{
+  right: 20%;
+}
+#contact-para-1,#contact-para-2,#contact-para-3,#contact-para-4{
+  position: absolute;
+  display: flex;
+  top: 15%;
+  color: white;
+  text-shadow: 
+              0.5px 0.5px 0px rgb(56, 56, 56),
+              -0.5px 0.5px 0px rgb(56, 56, 56), 
+              0.5px -0.5px 0px rgb(56, 56, 56), 
+              -0.5px -0.5px 0px rgb(56, 56, 56);
+}
+#contact-para-1 h4{
+  width: 3cm;
+}
+#contact-query{
+  position: absolute;
+  top: 25%;
+  left: 1cm;
+}
+.contact-input{
+  width: 18cm;
+  height: 8cm;
+  position: absolute;
+  bottom: 0;
+}
+.contact-input input{
+  width: 15cm;
+  height: 1cm;
+  position: absolute;
+  top: 30%;
+  left: 1cm;
+  padding-left: 10px;
+  &::placeholder{
+    font-weight: 550;
+    color: black;
+  }
+}
+.contact-input #first-input{
+  top: 13%;
+}
+.contact-input #second-input{
+  top: 30%;
+}
+.contact-input #third-input{
+  top: 47%;
+  height: 3.5cm;
+}
+#send-message{
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  height: 0.9cm;
+  width: 3cm;
+  border-radius: 5px;
+}
+#subject{
+  position: absolute;
+  bottom: 38%;
+  z-index: 1;
+  left: 8%;
+}
+#query-img{
+  height: 8cm;
+  width: 8cm;
+  right: 10%;
+  bottom: 8%;
+  position: absolute;
+  border-radius: 15px;
+}
+.login,.booking{
+  height: 99vb;
+  width: 100vi;
+  position: absolute;
+  background-color: rgb(217, 238, 242);
+  z-index: 1;
+  display: grid;
+}
+.login-content{
+  position: absolute;
+  z-index: 1;
+  width: 12cm;
+  height: 8cm;
+  border-radius: 5px;
+  border: 2px solid black;
+  align-self: center;
+  justify-self: center;
+  background-color: white;
+  display: grid;
+  border-radius: 15px;
+}
+.login-inner-content{
+  width: 10cm;
+  height: 6cm;
+  border: 2px solid rgb(1, 68, 192);
+  justify-self: center;
+  align-self: center;
+  position: absolute;
+  display: grid;
+  background-color: rgb(45, 155, 240);
+  border-radius: 15px;
+  opacity: 0.9;
+}
+.login-inner-content form{
+  position: absolute;
+  justify-self: left;
+  justify-items: center;
+  display: grid;
+  width: 10cm;
+}
+.login-inner-content form input{
+  width: 7cm;
+  height: 0.8cm;
+  border-radius: 17px;
+  margin-top: 0.5cm;
+  position: absolute;
+  padding-left: 10px;
+}
+#login-user{
+  top: 1cm;
+}
+#login-pass{
+  top: 2cm;
+}
+.login-inner-content #login-content-button{
+  position: absolute;
+  top: 3.65cm;
+  width: 5cm;
+  height: 0.7cm;
+  font-weight: 550;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#forgot-pass,#login-register{
+  justify-self: center;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: smaller;
+  margin-right: 0.4cm;
+  &:hover{
+    color: rgb(211, 233, 229);
+  }
+}
+#login-register{
+  bottom: 5%;
+}
+#welcome-msg{
+  justify-self: center;
+  font-weight: 600;
+  font-size: 1.1cm;
+  top: 3cm;
+  position: absolute;
+}
+.login-user-img{
+  height: 1.5cm;
+  justify-self: center;
+  position: absolute;
+  top: 5.4cm;
+  z-index: 2;
+}
+.login-extra{
+  position: absolute;
+  justify-self: center;
+  display: flex;
+  width: 10cm;
+  height: 1cm;
+  bottom: 0%;
+  left: 25%;
+}
+.contain-signin {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 99vb;
+  width: 100vi;
+  z-index: 1;
+  background-color: white;
+}
+.outer-container-signin {
+  width: 15cm;
+  height: 13cm;
+  background-color: rgb(96, 196, 245);
+  display: grid;
+  align-items: center;
+  border-radius: 1cm;
+}
+.inner-container-signin {
+  background-color: rgb(0, 148, 221);
+  position: absolute;
+  width: 12cm;
+  height: 10cm;
+  border-radius: 1cm;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+.inner-container-signin input {
+  width: 8cm;
+  height: 1cm;
+  border-radius: 1cm;
+  border-color: transparent;
+  margin-top: 0.5cm;
+  align-self: center;
+  padding-left: 15px;
+}
+.contain-signin form {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.inner-contain-signin svg {
+  position: absolute;
+}
+.inner-contain-signin button {
+  justify-self: center;
+  margin-top: 0.5cm;
+  width: 4.5cm;
+  height: 0.8cm;
+  background-color: black;
+  color: white;
+  border: transparent;
+}
+#signin-phone {
+  height: 0.75cm;
+  top: 4.85cm;
+  left: 0.9cm;
+}
+#signin-email {
+  top: 3.3cm;
+  left: 0.9cm;
+}
+#signin-lock {
+  top: 6.5cm;
+  left: 1cm;
+}
+#sign-user{
+  position: absolute;
+  height: 2.5cm;
+  top: 2.2cm;
+  justify-self: center;
+  z-index: 2;
+  left: 18.4cm;
+}
+#signin-button{
+  position: absolute;
+  bottom: 10%;
+  width: 4cm;
+  height: 0.8cm;
+  border-radius: 5px;
+}
+.booking-content{
+  width: 99%;
+  height: 70%;
+  background-color: rgb(3, 98, 145);
+  border: 3px solid rgb(0, 59, 130);
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  border-radius: 5px;
+}
+.booking-inner-content{
+  width: 50%;
+  height: 80%;
+  background-color: rgb(3, 131, 186);
+  border: 2px solid rgb(1, 47, 100);
+  justify-self: center;
+  align-self: center;
+  border-radius: 5px;
+  display: grid flex;
+}
+#booking-location,#search-hospital,#patient-name,#booking-age,#booking-gender,#booking-date,#booking-time,#booking-department,#booking-doctor,#booking-desc{
+  position: absolute;
+  height: 1cm;
+  border-radius: 5px;
+  left: 34%;
+  margin-top: 0.5cm;
+  padding-left: 15px;
+}
+#booking-desc{
+  width: 12cm;
+  height: 2.5cm;
+  border: 1px solid black;
+  justify-self: center;
+  top: 55%;
+}
+#booking-doctor{
+  top: 49%;
+  width: 12.5cm;
+}
+#booking-department{
+  width: 12.5cm;
+  top: 43%;
+}
+#booking-age{
+  top: 36%;
+  width: 1.5cm;
+}
+#booking-gender{
+  top: 36%;
+  width: 2.5cm;
+  left: 39.3%;
+  height: 1.1cm;
+}
+#booking-date{
+  top: 36%;
+  width: 3.8cm;
+  left: 45.8%;
+}
+#booking-time{
+  top: 36%;
+  left: 57%;
+  width: 3cm;
+}
+#patient-name{
+  width: 12cm;
+  top: 30%;
+}
+#search-hospital{
+  left: 50.5%;
+  width: 5.4cm;
+  border-radius: 50px;
+}
+#booking-location{
+  width: 5.3cm;
+  padding-left: 32px;
+}
+#location{
+  height: 1cm;
+  position: absolute;
+  left: 31%;
+  z-index: 1;
+  top: 24.6%;
+}
+#search{
+  right: 47%;
+  top: 24.9%;
+  height: 0.8cm;
+  position: absolute;
+  z-index: 1;
+}
+#search-hospital{
+  padding-left: 35px;
+}
+#booking-title,#booking-sub-title{
+  position: absolute;
+  justify-self: center;
+}
+#booking-title{
+  top: 5%;
+}
+#booking-sub-title{
+  top: 9.6%;
+}
+#booking-appointment{
+  position: absolute;
+  left: 37%;
+  bottom: 25%;
+  width: 10cm;
+  height: 1cm;
+  border-radius: 15px;
+  background-color: rgb(0, 145, 255);
+  cursor: pointer;
+}
