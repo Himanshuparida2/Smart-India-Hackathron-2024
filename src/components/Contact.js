@@ -1,11 +1,12 @@
 import React from 'react'
 import query from '../images/query.jpg'
+import { Link } from 'react-router-dom'
 
 function Contact(props) {
   return (
     <div>
         <h1 id='contact-title'>Contact US..</h1>
-        <button id="help-booking-btn"><p>Make a Booking</p></button>
+       <Link to='/booking'><button id="help-booking-btn"><p>Make a Booking</p></button></Link>
       <div className="contain-contact">
        <h1 id='contact-info'>Contact Information :</h1>
             <div className="contact-inner-content">

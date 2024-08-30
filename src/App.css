@@ -16,7 +16,6 @@ Link{
   height: 1cm;
   top: 0.7cm;
   left: 2.4cm;
-  z-index: 1;
   transition: left 0.3s ease;
 }
 .sidebar{
@@ -28,7 +27,7 @@ Link{
   margin-left: -15px;
   margin-top: -16px;
   opacity: 0.7;
-  z-index: 2;
+  z-index: 1;
   border: 1px solid black;
   font-family: sans-serif;
   transition: width 0.3s ease;
@@ -250,7 +249,7 @@ svg{
   position: absolute;
   right: 2%;
   top: 3%;
-  z-index: 2;
+  z-index: 1;
 }
 .navbar ul{
   display: flex;
@@ -299,7 +298,7 @@ svg{
   width: 6.5cm;
   position: absolute;
   right: 8%;
-  top: 10%;
+  bottom: 10%;
   opacity: 1;
   border-radius: 15px;
   z-index: 1;
@@ -509,11 +508,12 @@ svg{
   border-radius: 15px;
 }
 .login,.booking{
-  height: 99vb;
+  height: 100vb;
   width: 100vi;
   position: absolute;
   background-color: rgb(217, 238, 242);
   z-index: 1;
+  margin-top: -1.5%;
   display: grid;
 }
 .login-content{
@@ -552,7 +552,7 @@ svg{
   width: 7cm;
   height: 0.8cm;
   border-radius: 17px;
-  margin-top: 0.5cm;
+  margin-top: 0.7cm;
   position: absolute;
   padding-left: 10px;
 }
@@ -560,7 +560,7 @@ svg{
   top: 1cm;
 }
 #login-pass{
-  top: 2cm;
+  top: 1.5cm;
 }
 .login-inner-content #login-content-button{
   position: absolute;
@@ -607,12 +607,32 @@ svg{
   bottom: 0%;
   left: 25%;
 }
+.login-inner-content form #email{
+  top: 0.85cm;
+  z-index: 1;
+  left: 0.6cm;
+
+}
+.login-inner-content form #lock{
+  top: 2.35cm;
+  z-index: 1;
+  left: 0.6cm;
+}
+#company-logo{
+  position: absolute;
+  width: 1cm;
+  height: 1cm;
+  top: 0.7cm;
+  z-index: 2;
+  left: 0.7cm;
+}
 .contain-signin {
   display: grid;
   justify-content: center;
   align-items: center;
   position: absolute;
-  height: 99vb;
+  height: 100vb;
+  margin-top: -0.5cm;
   width: 100vi;
   z-index: 1;
   background-color: white;

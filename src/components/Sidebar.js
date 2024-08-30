@@ -1,7 +1,6 @@
 import React from 'react'
 import home from '../images/home.png'
-// eslint-disable-next-line
-import { BrowserRouter as Router,Routes,Route,Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
     const ele=document.querySelectorAll('.sidebar ul li');
