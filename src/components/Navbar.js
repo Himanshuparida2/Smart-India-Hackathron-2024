@@ -10,7 +10,7 @@ function Navbar() {
             <ul>
                 <li><Link to="">Insurance</Link></li>
                 <li><Link to="">Blood</Link></li>
-                <li><Link to="/login">{logged==='false'?'Login':'Logout'}</Link></li>
+                <li><Link to="/loginas">{logged==='false'?'Login':'Logout'}</Link></li>
             </ul>
             <Link to='/profile'><img src={user} alt="user"/></Link>
         </div>

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Loggedas } from '../context/Loggedas';
 
 function Loginas() {
-    const [login_as,setLogin_as]=useState('');
+    const [login_as,setLogin_as]=useContext(Loggedas);
   return (
     <div>
       <div className="login">
