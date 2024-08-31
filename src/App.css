@@ -27,7 +27,7 @@ Link{
   margin-left: -15px;
   margin-top: -16px;
   opacity: 0.7;
-  z-index: 1;
+  z-index: 2;
   border: 1px solid black;
   font-family: sans-serif;
   transition: width 0.3s ease;
@@ -597,6 +597,7 @@ svg{
   position: absolute;
   top: 5.4cm;
   z-index: 2;
+  display: none;
 }
 .login-extra{
   position: absolute;
@@ -617,6 +618,34 @@ svg{
   top: 2.35cm;
   z-index: 1;
   left: 0.6cm;
+}
+.login-as{
+  display: grid;
+}
+.show-login{
+  display: block;
+}
+.show-login{
+  display: none;
+}
+.login-as-inner{
+  width: 8.7cm;
+  background-color: rgb(29, 125, 251);
+  border-radius: 15px;
+  opacity: 0.8;
+  height: 5cm;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+}
+#Login-to-Patient-portal,#Login-to-Medco-portal{
+  width: 6cm;
+  height: 1cm;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  margin-left: 1.5cm;
+  margin-top: 0.5cm;
 }
 #company-logo{
   position: absolute;
@@ -823,4 +852,296 @@ svg{
   border-radius: 15px;
   background-color: rgb(0, 145, 255);
   cursor: pointer;
+}
+.profile-content{
+  width: 100vi;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  display: grid;
+}
+.profile-outer-content{
+  width: 30cm;
+  height: 20cm;
+  background-color: rgb(2, 135, 192);
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+}
+#patient-profile{
+  position: absolute;
+  top: 5%;
+  left: 15%;
+}
+.profile-details{
+  width: 35%;
+  height: 6.5cm;
+  border-radius: 20px;
+  margin-left: 1cm;
+  margin-top: 1.2cm;
+  border: 2px solid rgb(0, 34, 42);
+}
+#user-profile-img{
+  height: 1cm;
+  margin-top: 0.5cm;
+  margin-left: 0.5cm;
+}
+#back{
+  height: 0.5cm;
+  position: absolute;
+  left: 5cm;
+  top: 1.1cm;
+  cursor: pointer;
+}
+#profile-pronounce{
+  left: 7.3cm;
+}
+.profile-inner-content h4{
+  position: absolute;
+  top: 2.5cm;
+  left: 8cm;
+}
+.profile-inner-content #three-dot li{
+  position: absolute;
+  left: 14.8cm;
+  top: 2.8cm;
+  z-index: 2;
+  background-color: gray;
+  width: 2cm;
+  height: 1cm;
+  text-align: center;
+  justify-self: center;
+  font-weight: 600;
+  &:hover{
+    background-color:antiquewhite;
+  }
+}
+.profile-inner-content ul li p{
+  margin-top: 10%;
+  cursor: pointer;
+}
+#dots-menu{
+  height: 1cm;
+  left: 13.4cm;
+  top: 2cm;
+  cursor: pointer;
+}
+.profile-details h3{
+  position: absolute;
+  left: 17%;
+  top: 17%;
+}
+#profile-phone{
+  height: 0.65cm;
+  top: 22%;
+}
+#profile-email-logo{
+  top: 27%;
+}
+#profile-home{
+  height: 0.7cm;
+  position: absolute;
+  top: 32%;
+}
+#profile-number,#profile-email,#profile-address{
+  position: absolute;
+  left: 20%;
+}
+#profile-number{
+  top: 22.5%;
+}
+#profile-email{
+  top: 27.5%;
+}
+#profile-address{
+  top: 32.5%;
+  width: 8cm;
+  height: 1.35cm;
+  display: flex;
+}
+.overview{
+  position: absolute;
+  border: 2px solid rgb(0, 34, 42);
+  width: 14cm;
+  height: 4cm;
+  right: 14%;
+  top: 9%;
+  border-radius: 15px;
+}
+.overview h3{
+  margin-left: 0.4cm;
+  margin-top: 0.5cm;
+}
+.overview div{
+  position: absolute;
+  font-weight: 550;
+}
+.overview div h5{
+  margin-left: 0.2cm;
+  background-color: rgb(0, 221, 255);
+  padding-left: 0.15cm;
+}
+#profile-gender{
+  display: block;
+  top: 29%;
+  left: 10%;
+}
+#profile-DOB{
+  display: block;
+  top: 29%;
+  left: 26%;
+}
+#profile-DOB h5{
+  padding-left:0.35cm ;
+}
+#profile-age{
+  display: block;
+  top: 29%;
+  left: 50%;
+}
+#profile-age h5{
+  padding-left: 2%;
+}
+#profile-marital-status{
+  display: block;
+  top: 29%;
+  left: 62%;
+}
+#profile-marital-status h5{
+  padding-left: 0.5cm;
+}
+#profile-previous-visit{
+  display: block;
+  top: 60%;
+  left: 10%;
+}
+#profile-previous-visit h5{
+  padding-left: 0.35cm;
+}
+#profile-next-visit{
+  display: block;
+  top: 60%;
+  left: 37%;
+}
+#profile-blood-type{
+  display: block;
+  top: 60%;
+  right: 28%;
+}
+#profile-blood-type h5{
+  padding-left: 0.8cm;
+}
+.documents-report{
+  width: 35%;
+  height: 10cm;
+  border-radius: 15px;
+  margin-left: 1cm;
+  margin-top: 1.2cm;
+  border: 2px solid rgb(0, 34, 42);
+  display: grid;
+}
+.documents-report h3{
+  position: absolute;
+  left: 17%;
+  bottom: 46%;
+  width: 6cm;
+}
+.documents-report #documents-menu{
+  position: absolute;
+  height: 8cm;
+  align-content: center;
+  justify-self: center;
+  list-style: none;
+  margin-top: 1.7cm;
+  margin-left: 0.5cm;
+}
+#documents-menu ul{
+  justify-self: center;
+}
+#documents-menu li{
+  height: 2cm;
+  width: 7cm;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  margin-left: 0.4cm;
+  font-weight: 550;
+  &:hover{
+    background-color: rgb(163, 164, 164);
+    cursor: pointer;
+  }
+}
+#document{
+  margin-top: 0.2cm;
+}
+#document-upload{
+  height: 1cm;
+  width: 3cm;
+  bottom: 2cm;
+  margin-left: 2cm;
+  position: absolute;
+  cursor: pointer;
+}
+#upload{
+  margin-left: -24%;
+}
+#view-all{
+  bottom: 2.3cm;
+  position: absolute;
+  left: 11.5cm;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.patient-history{
+  position: absolute;
+  border: 2px solid rgb(0, 34, 42);
+  width: 16cm;
+  height: 13cm;
+  right: 14%;
+  top: 32%;
+  border-radius: 15px;
+  display: grid;
+}
+.patient-history h3{
+  margin-left: 0.4cm;
+  margin-top: 0.5cm;
+}
+.history-list{
+  display: flex;
+}
+#history-list1,#history-list2{
+  width: 14cm;
+  height: 10cm;
+  list-style: none;
+}
+#history-list1 li,#history-list2 li{
+  width: 7cm;
+  height: 2cm;
+  margin: 0.5cm;
+  justify-content: center;
+  display: grid;
+  align-content: center;
+  &:hover{
+    background-color: rgb(163, 164, 164);
+  }
+}
+#history-list1{
+  position: absolute;
+  right: 9%;
+  top: 9%;
+}
+.history-list li svg{
+  height: 1cm;
+  right: 0;
+}
+#history-list2{
+  position: absolute;
+  left: 7%;
+  top: 9%;
+  margin-left: 7cm;
+}
+#history-list2 li:hover{
+  background-color: rgb(163, 164, 164);
 }

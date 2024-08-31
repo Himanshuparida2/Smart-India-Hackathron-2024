@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 function Sidebar() {
     const ele=document.querySelectorAll('.sidebar ul li');
-ele.forEach(Nav=>{
+    ele.forEach(Nav=>{
     Nav.addEventListener('click',()=>{
-        ele.forEach(Element=>Element.classList.remove('active'));
+        ele.forEach(element=>element.classList.remove('active'));
         Nav.classList.add('active')
     })
 }

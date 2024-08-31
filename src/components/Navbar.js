@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import user from '../images/user.png'
 import { Link } from 'react-router-dom'
-import { Loggedin } from '../context/Logged';
+import {LoggedInContext} from '../context/Logged';
 function Navbar() {
-    const {logged,setLogged} =useContext(Loggedin);
+    const {logged,setLogged}=useContext(LoggedInContext);
   return (
     <div>
       <div className="navbar">
@@ -12,7 +12,7 @@ function Navbar() {
                 <li><Link to="">Blood</Link></li>
                 <li><Link to="/login">{logged==='false'?'Login':'Logout'}</Link></li>
             </ul>
-            <img src={user} alt="user"/>
+            <Link to='/profile'><img src={user} alt="user"/></Link>
         </div>
     </div>
   )

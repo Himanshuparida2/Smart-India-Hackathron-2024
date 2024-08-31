@@ -10,13 +10,15 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Login from "./components/Login";
 import Signin from "./components/Signin";
 import Booking from "./components/Booking";
-import {IsLog} from "./context/Logged"
+import Profile from "./components/Profile";
+import { LoggedInProvider } from "./context/Logged";
+import Loginas from "./components/Loginas";
 
 function App() {
   return (
     <div className="App">
       <Router>
-      <IsLog>
+      <LoggedInProvider>
         <Navbar />
         <Sidebar />
         <Background/>
@@ -26,10 +28,12 @@ function App() {
           <Route path="/about" element={<About/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
+          <Route path="/loginas"element={<Loginas/>}></Route>
           <Route path="/signin" element={<Signin/>}></Route>
           <Route path="/booking" element={<Booking/>}></Route>
+          <Route path="/profile" element={<Profile name={'Adyasha'}/>}></Route>
         </Routes>
-        </IsLog>
+        </LoggedInProvider>
       </Router>
     </div>
   );
